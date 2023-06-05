@@ -1,11 +1,14 @@
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <title>WYKA - HOTEL</title>
 </head>
+
 <body>
     <header class="header">
         <nav class="nav">
@@ -20,63 +23,143 @@
             <img src="../assets/img/logo_completo.png">
         </div>
     </header>
-    
+
     <main>
-        <!--
-                    <div class="modal">
+        <div class="modal">
             <div class="reserva">
-                <span>Hacer una reservas</span>
+              <span>Hacer una reservas</span>
             </div>
-            <div class="fecha">
-                asdasd
-            </div>
-        </div>
-        -->
+    
+            <form class="bm-form-container">
+              <div class="bm-form-row ">
+               
+                    <div class="bm-form-col">
+                        <div class="bm-date-card">
+                            <div>REGISTRATE</div>
+                            <div class="bm-date-card-day">05</div>
+                            <div>JUNIO</div>
+                            <div></div>
+                        </div>
+                    </div>
+    
+                    <div class="bm-form-col">
+                        <div class="bm-date-card">
+                            <div>VERIFICAR</div>
+                            <div class="bm-date-card-day">06</div>
+                            <div>JUNIO</div>
+                            <div></div>
+                        </div>
+                    </div>   
+              </div>
+              <div class="bm-form-row">
+                <button class="bm-btn btn btn-action btn-block" type="submit" role="link">
+                  <font style="vertical-align: inherit">
+                    <font style="vertical-align: inherit">Reservar</font>
+                  </font>
+                </button>
+              </div>
+            </form>
+          </div>
 
         <section>
             <video src="../assets/videos/wyka baja calidad.mp4" autoplay loop muted></video>
         </section>
 
+        <div class="separador"></div>
+
         <section class="section-info">
             <div class="info">
-                <h1>Acerca de WYKA</h1>
-                <span>★ ★ ★</span>
-                <p>Disfruta de tus vacaciones en nuestros habitaciones lujosas y disfruta del ambiente acogedor.</p>
+                <div>
+                    <h1>ACERCA DE WYKA HOTEL</h1>
+                    <span>★ ★ ★</span>
+                    <p>Somos una reciente empresa hotelera en la que podras disfrutar de tus vacaciones tenemos lujosas habitaciones y un ambiente acogedor.</p>
+                </div>
                 <ul>
                     <li>
                         <span>COMIDA</span>
-                        <img src="../assets/icons/menu.png">
+                        <img src="../assets/icons/menu.png" z-index='0'>
                     </li>
                     <li>
                         <span>HOTEL EN AVENIDA</span>
-                        <img src="../assets/icons/hotel.png">
+                        <img src="../assets/icons/hotel.png" z-index='-1'>
                     </li>
                     <li>
                         <span>WIFI</span>
-                        <img src="../assets/icons/wifi.png">
+                        <img src="../assets/icons/wifi.png" z-index='-2'>
                     </li>
                 </ul>
             </div>
-            <div class="carrousel">
-                asd
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../assets/img/auditorio2.JPG"></div>
+                    <div class="swiper-slide"><img src="../assets/img/cama.JPG"></div>
+                    <div class="swiper-slide"><img src="../assets/img/camachica.JPG"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </section>
 
+        <div class="separador"></div>
+
+        <div class="separador-crema""></div>
+
+        <section class="section-habitaciones">
+            <div>
+                <img src="../assets/img/cuarto2.jpg" alt="" width="200px" height="200px">
+            </div>
+        </section>
+
+        <div class="separador-crema""></div>
+
         <section>
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d493.75754140701224!2d-79.02753394974549!3d-8.095330356932966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3db486dfe575%3A0x8ffd5e4ad23abd7a!2sHotel%20Wyka!5e0!3m2!1ses!2spe!4v1685727142452!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d493.75754140701224!2d-79.02753394974549!3d-8.095330356932966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3db486dfe575%3A0x8ffd5e4ad23abd7a!2sHotel%20Wyka!5e0!3m2!1ses!2spe!4v1685727142452!5m2!1ses!2spe"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
 
     </main>
 
     <footer>
-        <div class="social-media">
-            <span class="title">Redes Sociales</span>
-            <span class="point"></span>
+        <div class="footer-section-1">
+            <h2>WYKA HOTEL</h2>
             <ul>
-                <li></li>
+                <li>
+                    <img src="" alt="">
+                    <span>Ubicacion</span>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <span>TELEFONO</span>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <span>Correo Electronico</span>
+                </li>
             </ul>
         </div>
-        <div class="links"></div>
+        <div class="footer-section-2">
+
+        </div>
     </footer>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
 </body>
+
 </html>
