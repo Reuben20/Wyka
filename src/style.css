@@ -237,8 +237,10 @@ footer {
     width: 30%;
     color: var(--blanco);
     height: 100%;
-    padding-left: 30vh;
-    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-section-1 h2 {
