@@ -1,12 +1,11 @@
 @import url('../assets/fonts/Gopher-Bold.ttf');
-
 :root {
-    --azul: rgb(34, 48, 73);
-    --crema: rgb(176,164,148);
-    --blanco: rgb(240,235,231);
-    --negro: rgb(34,34,35)
+    --azul: #223049;
+    --crema: rgb(176, 164, 148);
+    --blanco: #efeae6;
+    --negro: rgb(34, 34, 35);
+    --swiper-navigation-color: var(--blanco);
 }
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,31 +13,35 @@
     font-family: 'Gopher-Bold', sans-serif;
     font-size: 15px;
 }
-
-body{
+body {
     background: white;
 }
-
 .separador {
     width: auto;
     height: 10vh;
 }
-
 .separador-crema {
     width: auto;
     height: 10vh;
     background-color: var(--crema);
 }
-
+.separador-azul {
+    width: auto;
+    height: 10vh;
+    background-color: var(--azul);
+}
+.separador-horizontal-blanco {
+    background-color: white;
+    width: 30%;
+}
 .header {
     position: fixed;
-    top:0;
+    top: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     z-index: 100;
 }
-
 .nav {
     height: 70px;
     width: 100%;
@@ -47,21 +50,17 @@ body{
     align-items: center;
     opacity: 0.8;
 }
-
-.nav-links{
+.nav-links {
     height: 100%;
     list-style: none;
     color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: small;
 }
-
 .nav-links li {
     cursor: pointer;
 }
-
 .center {
     position: absolute;
     display: flex;
@@ -74,18 +73,15 @@ body{
     align-items: center;
     justify-content: center;
 }
-
 .center img {
     width: 63px;
     height: 100px;
 }
-
 main {
     height: auto;
     width: 100%;
 }
-
-.modal  {
+.modal {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -93,10 +89,9 @@ main {
     right: 100px;
     width: 250px;
     height: 200px;
-    background-color: rgba(15,25,34,0.6);
+    background-color: rgba(15, 25, 34, 0.6);
     color: white;
 }
-
 .reserva {
     display: flex;
     align-items: center;
@@ -105,42 +100,34 @@ main {
     width: 100%;
     height: 20px;
 }
-
 .fecha {
     background-color: var(--azul);
     opacity: 0.8;
 }
-
-
 main {
     display: flex;
     flex-direction: column;
 }
-
 main section video {
     width: 100%;
     height: auto;
 }
-
 .section-info {
     display: flex;
     flex-direction: row;
     width: auto;
     height: 60vh;
 }
-
 .info {
-    width: 40%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
-
 .info h1 {
     font-weight: 800;
 }
-
 .info div {
     display: flex;
     flex-direction: column;
@@ -148,20 +135,17 @@ main section video {
     align-items: center;
     width: 60%;
 }
-
 .info div p {
     margin-top: 4vh;
     font-size: 20px;
     text-align: center;
 }
-
 .info ul {
     display: flex;
     flex-direction: row;
     list-style: none;
     align-items: center;
 }
-
 .info ul li {
     display: flex;
     flex-direction: column;
@@ -170,77 +154,143 @@ main section video {
     margin-right: 3vh;
     margin-left: 3vh;
 }
-
 .info div h1 {
     font-size: 30px;
 }
-
 .info ul li span {
     font-size: 18px;
 }
-
 .info ul li img {
     width: 60px;
     height: 60px;
     margin-top: 1vh;
 }
-
-.slider  {
-    width: 60%;
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-}
-.slider img {
-    width: auto;
-    height: auto;
-    transition: 1s;
-}
-
 .section-habitaciones {
     width: 100%;
-    height: 400px;
+    height: 600px;
     background-color: var(--crema);
+    display: flex;
+    flex-direction: row;
 }
-
-
-
-.map{
+.section-habitaciones-1{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-habitacion {
+    width: 500px;
+    height: 400px;
+    background-color: var(--blanco);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    display: flex;
+    flex-direction: column;
+}
+.card-habitacion img {
     width: 100%;
-    height: 380px;
+    height: 80%;
+    border-radius: 10px 10px 0 0;
 }
-
-footer {
-    width: 100%;
-    height: 300px;
-    background-color: var(--azul);
+.habitacion-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
 }
-
-.footer-section-1 {
-    width: 50%;
+.habitacion-info ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.habitacion-info ul li {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: var(--blanco);
-    justify-content: center;
     align-items: center;
+}
+.habitacion-info ul li span {
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 5px;
+    font-weight: 900;
+    color: var(--crema);
+}
+.habitacion-info ul li img {
+    width: 30px;
+    height: 30px;
+}
+.map {
+    width: 100%;
     height: 100%;
 }
-
-footer-section-2 {
-    width: 50%;
-    background-color: black;
+footer {
+    width: 100%;
+    height: 350px;
+    background-color: var(--azul);
+    display: flex;
+    flex-direction: row;
 }
 
+.footer-section-1 {
+    width: 30%;
+    color: var(--blanco);
+    height: 100%;
+    padding-left: 30vh;
+    padding-top: 5vh;
+}
 
+.footer-section-1 h2 {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
 
+.footer-section-1 ul {
+    list-style: none;
+}
 
+.footer-section-1 ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 15px;
+}
 
+.footer-section-1 ul li span {
+    margin-left: 5px;
+}
 
-/*
+.footer-section-1 ul li svg{
+    fill: var(--blanco);
+    width: 20px;
+    height: 20px;
+}
 
-waaaaaaaaaaaaaa
-*/
+.footer-section-2 {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-section-2 ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-section-2 ul li svg {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-section-3 {
+    width: 40%;
+}
 
 .bm-form-row {
     background: #273038;
@@ -260,9 +310,8 @@ waaaaaaaaaaaaaa
 .bm-form-row {
     display: flex;
     flex-wrap: wrap;
-    
-}
 
+}
 .btn {
     border-radius: 0;
     font-weight: 500;
@@ -270,17 +319,15 @@ waaaaaaaaaaaaaa
     font-style: normal;
     letter-spacing: 1px;
     text-transform: uppercase;
-    
+
     line-height: 1.8rem;
     border: none;
     min-width: 190px;
 }
-
 .btn-block {
     display: block;
     width: 100%;
 }
-
 .bm-form-row .bm-form-col {
     flex-basis: 0;
     flex-grow: 1;
@@ -288,7 +335,6 @@ waaaaaaaaaaaaaa
     width: 100%;
     margin-right: 8px;
 }
-
 .bm-date-card {
     background: #273038;
     text-transform: uppercase;
@@ -299,40 +345,28 @@ waaaaaaaaaaaaaa
     -o-transition: border-color 300ms ease;
     transition: border-color 300ms ease;
 }
-
 .bm-date-card-day {
     font-size: 3.5em;
     line-height: 1;
 }
-
 .btn.btn-action {
     background-color: #9f6b3d;
     color: #fff;
 }
-
-
 .swiper {
-    width: 60%;
+    width: 100%;
     height: 100%;
-  }
-
-  .swiper-slide {
+}
+.swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .swiper-slide img {
+}
+.swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  .swiper {
-    margin-left: auto;
-    margin-right: auto;
-  }
+}
