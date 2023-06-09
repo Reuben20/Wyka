@@ -3,8 +3,9 @@
     --azul: #223049;
     --crema: rgb(176, 164, 148);
     --blanco: #efeae6;
-    --negro: rgb(34, 34, 35);
+    --negro: #222223;
     --swiper-navigation-color: var(--blanco);
+    --gris: #f4f4f3;
 }
 * {
     box-sizing: border-box;
@@ -20,20 +21,6 @@ body {
     width: auto;
     height: 10vh;
 }
-.separador-crema {
-    width: auto;
-    height: 10vh;
-    background-color: var(--crema);
-}
-.separador-azul {
-    width: auto;
-    height: 10vh;
-    background-color: var(--azul);
-}
-.separador-horizontal-blanco {
-    background-color: white;
-    width: 30%;
-}
 .header {
     position: fixed;
     top: 0;
@@ -42,7 +29,7 @@ body {
     justify-content: center;
     z-index: 100;
 }
-.nav {
+.navbar {
     height: 70px;
     width: 100%;
     background-color: var(--negro);
@@ -50,7 +37,7 @@ body {
     align-items: center;
     opacity: 0.8;
 }
-.nav-links {
+.navbar__list {
     height: 100%;
     list-style: none;
     color: white;
@@ -58,10 +45,10 @@ body {
     justify-content: space-around;
     align-items: center;
 }
-.nav-links li {
+.navbar__list__item--pointer {
     cursor: pointer;
 }
-.center {
+.logo-container {
     position: absolute;
     display: flex;
     background-color: var(--negro);
@@ -73,13 +60,15 @@ body {
     align-items: center;
     justify-content: center;
 }
-.center img {
+.logo-container__image {
     width: 63px;
     height: 100px;
 }
-main {
+.main {
     height: auto;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .modal {
     display: flex;
@@ -104,11 +93,10 @@ main {
     background-color: var(--azul);
     opacity: 0.8;
 }
-main {
-    display: flex;
-    flex-direction: column;
+.hero {
+    width: 100%;
 }
-main section video {
+.hero__video {
     width: 100%;
     height: auto;
 }
@@ -119,14 +107,11 @@ main section video {
     height: 60vh;
 }
 .info {
-    width: 75%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-}
-.info h1 {
-    font-weight: 800;
 }
 .info div {
     display: flex;
@@ -156,6 +141,7 @@ main section video {
 }
 .info div h1 {
     font-size: 30px;
+    font-weight: 800;
 }
 .info ul li span {
     font-size: 18px;
@@ -167,74 +153,114 @@ main section video {
 }
 .section-habitaciones {
     width: 100%;
-    height: 600px;
+    height: 1000px;
     background-color: var(--crema);
     display: flex;
-    flex-direction: row;
-}
-.section-habitaciones-1{
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.card-habitacion {
-    width: 500px;
-    height: 400px;
-    background-color: var(--blanco);
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    display: flex;
-    flex-direction: column;
-}
-.card-habitacion img {
-    width: 100%;
-    height: 80%;
-    border-radius: 10px 10px 0 0;
-}
-.habitacion-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 20%;
-}
-.habitacion-info ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-}
-.habitacion-info ul li {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.habitacion-info ul li span {
-    margin-left: 60px;
-    margin-right: 60px;
-    margin-top: 5px;
-    font-weight: 900;
-    color: var(--crema);
-}
-.habitacion-info ul li img {
-    width: 30px;
-    height: 30px;
-}
-.map {
-    width: 100%;
-    height: 100%;
-}
-footer {
-    width: 100%;
-    height: 350px;
-    background-color: var(--azul);
-    display: flex;
-    flex-direction: row;
 }
 
+.room-intro {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.room-intro__title {
+    font-weight: 800;
+    font-size: 30px;
+    color: white;
+}
+
+.room-intro__info {
+    margin-top: 2vh;
+    font-size: 20px;
+    text-align: center;
+    width: 50%;
+    color: white;
+}
+
+.card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4em;
+}
+
+.room-card {
+    height: 500px;
+    width: 380px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.room-card__imagen {
+    width: 90%;
+    height: 40%;
+}
+
+.room-card__cont {
+    width: 100%;
+    height: 60%;
+}
+
+.room-card__title {
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: 50px;
+    color: #3a3a3a;
+}
+
+.room-card__texto {
+    margin-top: 80px;
+    font-size: 15px;
+    color: #7a7a7a;
+}
+
+.location {
+    width: 100%;
+    height: 820px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.map {
+    width: 600px;
+    height: 600px;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.information-aboutus {
+    width: 70%;
+    height: 120px;
+    background-color: var(--negro);
+}
+/*
 .footer-section-1 {
-    width: 30%;
+    width: 60%;
     color: var(--blanco);
     height: 100%;
     display: flex;
@@ -244,8 +270,7 @@ footer {
 }
 
 .footer-section-1 h2 {
-    font-size: 20px;
-    margin-bottom: 50px;
+    font-size: 30px;
 }
 
 .footer-section-1 ul {
@@ -256,11 +281,12 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 30px;
 }
 
 .footer-section-1 ul li span {
-    margin-left: 5px;
+    margin-left: 30px;
+    font-size: 17px;
 }
 
 .footer-section-1 ul li svg{
@@ -268,32 +294,7 @@ footer {
     width: 20px;
     height: 20px;
 }
-
-.footer-section-2 {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer-section-2 ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.footer-section-2 ul li svg {
-    width: 40px;
-    height: 40px;
-}
-
-.footer-section-3 {
-    width: 40%;
-}
-
+*/
 .bm-form-row {
     background: #273038;
     text-transform: uppercase;
@@ -356,7 +357,7 @@ footer {
     color: #fff;
 }
 .swiper {
-    width: 100%;
+    width: 60%;
     height: 100%;
 }
 .swiper-slide {
