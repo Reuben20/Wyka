@@ -488,4 +488,16 @@ footer {
     .info ul {
         margin-top: 5vh;
     }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .footer-section_1 {
+        margin: 0 0 3vh 0;
+    }
 }
