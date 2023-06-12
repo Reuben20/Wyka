@@ -446,6 +446,21 @@ footer {
 }
 
 @media screen and (max-width: 1000px) {
+
+    .navbar__list li {
+        font-size: 13px;
+    }
+
+    .logo-container {
+        width: 80px;
+        height: 80px;
+    }
+
+    .logo-container__image {
+        width: 38px;
+        height: 60px;
+    }
+
     .section-info {
         flex-direction: column;
         justify-content: center;
@@ -454,6 +469,14 @@ footer {
 
     .info {
         width: 100%;
+    }
+
+    .info div {
+        text-align: center;
+    }
+
+    .info ul li {
+        text-align: center;
     }
 
     .separador {
@@ -499,5 +522,20 @@ footer {
 
     .footer-section_1 {
         margin: 0 0 3vh 0;
+        width: 80%;
+    }
+
+    .footer-section_2 {
+        width: 80%;
+    }
+
+    .footer-navigation {
+        width: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .modal {
+        visibility: hidden;
     }
 }
