@@ -1,26 +1,33 @@
 @import url('../assets/fonts/Gopher-Bold.ttf');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
     --azul: #223049;
-    --crema: rgb(176, 164, 148);
+    --crema: #b0a494;
+    --crema-darker: #a49886;
     --blanco: #efeae6;
     --negro: #222223;
     --swiper-navigation-color: var(--blanco);
     --gris: #f4f4f3;
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Gopher-Bold', sans-serif;
+    font-family: 'Poppins', 'Gopher-Bold', sans-serif;
     font-size: 15px;
 }
+
 body {
     background: white;
 }
+
 .separador {
     width: auto;
     height: 10vh;
 }
+
 .header {
     position: fixed;
     top: 0;
@@ -29,6 +36,7 @@ body {
     justify-content: center;
     z-index: 100;
 }
+
 .navbar {
     height: 70px;
     width: 100%;
@@ -37,6 +45,7 @@ body {
     align-items: center;
     opacity: 0.8;
 }
+
 .navbar__list {
     height: 100%;
     list-style: none;
@@ -45,9 +54,11 @@ body {
     justify-content: space-around;
     align-items: center;
 }
+
 .navbar__list__item--pointer {
     cursor: pointer;
 }
+
 .logo-container {
     position: absolute;
     display: flex;
@@ -60,16 +71,19 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .logo-container__image {
     width: 63px;
     height: 100px;
 }
+
 .main {
     height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
 }
+
 .modal {
     display: flex;
     flex-direction: column;
@@ -81,6 +95,7 @@ body {
     background-color: rgba(15, 25, 34, 0.6);
     color: white;
 }
+
 .reserva {
     display: flex;
     align-items: center;
@@ -89,23 +104,28 @@ body {
     width: 100%;
     height: 20px;
 }
+
 .fecha {
     background-color: var(--azul);
     opacity: 0.8;
 }
+
 .hero {
     width: 100%;
 }
+
 .hero__video {
     width: 100%;
     height: auto;
 }
+
 .section-info {
     display: flex;
     flex-direction: row;
     width: auto;
     height: 60vh;
 }
+
 .info {
     width: 40%;
     display: flex;
@@ -113,6 +133,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
 }
+
 .info div {
     display: flex;
     flex-direction: column;
@@ -120,17 +141,20 @@ body {
     align-items: center;
     width: 60%;
 }
+
 .info div p {
     margin-top: 4vh;
     font-size: 20px;
     text-align: center;
 }
+
 .info ul {
     display: flex;
     flex-direction: row;
     list-style: none;
     align-items: center;
 }
+
 .info ul li {
     display: flex;
     flex-direction: column;
@@ -139,18 +163,22 @@ body {
     margin-right: 3vh;
     margin-left: 3vh;
 }
+
 .info div h1 {
     font-size: 30px;
     font-weight: 800;
 }
+
 .info ul li span {
     font-size: 18px;
 }
+
 .info ul li img {
     width: 60px;
     height: 60px;
     margin-top: 1vh;
 }
+
 .section-habitaciones {
     width: 100%;
     height: 1000px;
@@ -196,7 +224,7 @@ body {
 .room-card {
     height: 500px;
     width: 380px;
-    background-color: white;
+    background-color: var(--crema-darker);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -204,6 +232,7 @@ body {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .room-card__imagen {
@@ -214,19 +243,23 @@ body {
 .room-card__cont {
     width: 100%;
     height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .room-card__title {
-    margin-top: 20px;
-    font-size: 20px;
-    margin-bottom: 50px;
+    font-size: 25px;
     color: #3a3a3a;
+    margin-top: 40px;
+    color: white;
 }
 
 .room-card__texto {
-    margin-top: 80px;
-    font-size: 15px;
-    color: #7a7a7a;
+    font-size: 18px;
+    margin-top: 40px;
+    color: white;
+    text-align: center;
 }
 
 .location {
@@ -258,43 +291,7 @@ footer {
     height: 120px;
     background-color: var(--negro);
 }
-/*
-.footer-section-1 {
-    width: 60%;
-    color: var(--blanco);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-.footer-section-1 h2 {
-    font-size: 30px;
-}
-
-.footer-section-1 ul {
-    list-style: none;
-}
-
-.footer-section-1 ul li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.footer-section-1 ul li span {
-    margin-left: 30px;
-    font-size: 17px;
-}
-
-.footer-section-1 ul li svg{
-    fill: var(--blanco);
-    width: 20px;
-    height: 20px;
-}
-*/
 .bm-form-row {
     background: #273038;
     text-transform: uppercase;
@@ -306,15 +303,18 @@ footer {
     transition: border-color 300ms ease;
     opacity: 0.75;
 }
+
 .bm-box--vertical .bm-form-row {
     align-items: flex-end;
     margin-bottom: 0.5em;
 }
+
 .bm-form-row {
     display: flex;
     flex-wrap: wrap;
 
 }
+
 .btn {
     border-radius: 0;
     font-weight: 500;
@@ -327,10 +327,12 @@ footer {
     border: none;
     min-width: 190px;
 }
+
 .btn-block {
     display: block;
     width: 100%;
 }
+
 .bm-form-row .bm-form-col {
     flex-basis: 0;
     flex-grow: 1;
@@ -338,6 +340,7 @@ footer {
     width: 100%;
     margin-right: 8px;
 }
+
 .bm-date-card {
     background: #273038;
     text-transform: uppercase;
@@ -348,18 +351,22 @@ footer {
     -o-transition: border-color 300ms ease;
     transition: border-color 300ms ease;
 }
+
 .bm-date-card-day {
     font-size: 3.5em;
     line-height: 1;
 }
+
 .btn.btn-action {
     background-color: #9f6b3d;
     color: #fff;
 }
+
 .swiper {
     width: 60%;
     height: 100%;
 }
+
 .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -367,9 +374,55 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
 .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+@media screen and (max-width: 1000px) {
+    .section-info {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .separador {
+        height: 5vh;
+    }
+
+    .swiper {
+        margin-top: 5vh;
+        width: 100%;
+    }
+
+    .room-intro__info {
+        width: 80%;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .section-habitaciones {
+        height: auto;
+    }
+
+    .room-card {
+        margin-top: 5vh;
+    }
+
+    .room-intro {
+        margin-top: 5vh;
+    }
+
+    .info ul {
+        margin-top: 5vh;
+    }
 }
