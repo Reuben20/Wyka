@@ -25,7 +25,7 @@ body {
 
 .separador {
     width: auto;
-    height: 10vh;
+    height: 12vh;
 }
 
 .header {
@@ -38,16 +38,19 @@ body {
 }
 
 .navbar {
-    height: 70px;
+    height: auto;
     width: 100%;
     background-color: var(--negro);
+    display: flex;
     flex-direction: row;
     align-items: center;
     opacity: 0.8;
+    padding: 10px 0 10px 0;
 }
 
 .navbar__list {
     height: 100%;
+    width: 70%;
     list-style: none;
     color: white;
     display: flex;
@@ -55,26 +58,43 @@ body {
     align-items: center;
 }
 
-.navbar__list__item--pointer {
+.navbar__list__item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navbar__list__item:hover {
+    background-color: black;
+    padding: 0 4px 0 4px;
+}
+
+.navbar__list__item a {
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+}
+
+.pointer {
     cursor: pointer;
 }
 
 .logo-container {
-    position: absolute;
+    width: 30%;
     display: flex;
-    background-color: var(--negro);
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    border-style: solid;
-    border-color: white;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .logo-container__image {
-    width: 63px;
-    height: 100px;
+    width: auto;
+    height: 80px;
+}
+
+.logo-container__image:hover {
+    cursor: pointer;
 }
 
 .main {
@@ -181,12 +201,13 @@ body {
 
 .section-habitaciones {
     width: 100%;
-    height: 1000px;
+    height: auto;
     background-color: var(--crema);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 10% 0 11% 0;
 }
 
 .room-intro {
@@ -264,11 +285,11 @@ body {
 
 .location {
     width: 100%;
-    height: 820px;
+    height: auto;
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
 }
 
@@ -276,7 +297,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5vh;
+    padding: 6%;
 }
 
 .texto {
@@ -447,18 +468,25 @@ footer {
 
 @media screen and (max-width: 1000px) {
 
+    .header {
+        position: relative;
+    }
+
+    .navbar {
+        opacity: 1;
+    }
+
+    .navbar__list {
+        visibility: hidden;
+        overflow: hidden;
+    }
+
     .navbar__list li {
         font-size: 13px;
     }
 
-    .logo-container {
-        width: 80px;
-        height: 80px;
-    }
-
     .logo-container__image {
-        width: 38px;
-        height: 60px;
+        height: 50px;
     }
 
     .section-info {
@@ -538,4 +566,8 @@ footer {
     .modal {
         visibility: hidden;
     }
+}
+
+.modal {
+    visibility: hidden;
 }
