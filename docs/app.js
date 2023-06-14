@@ -21,7 +21,10 @@ var swiper_habitaciones = new Swiper(".mySwiper_2", {
     spaceBetween: 30,
     grabCursor: true,
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+        el: ".swiper-pagination",
+        clickable: true,
     },
 });
+
+
+document.getElementById('video').play()
