@@ -35,7 +35,7 @@ var state = false
 
 document.getElementById('menu').addEventListener("click", () => {
     if (state === false) {
-        navbar__list.style.transition = "0.4s"
+        navbar__list.style.transition = "0.5s"
         navbar__list.style.visibility = "visible"
         navbar__list.style.flexDirection = "column"
         navbar__list.style.marginTop = "50px"
