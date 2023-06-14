@@ -466,6 +466,12 @@ footer {
     object-fit: cover;
 }
 
+.hamburger-menu {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
 @media screen and (max-width: 1000px) {
 
     .header {
@@ -479,6 +485,15 @@ footer {
     .navbar__list {
         visibility: hidden;
         overflow: hidden;
+        width: 50%;
+        opacity: 1;
+    }
+
+    .hamburger-menu {
+        width: 25px;
+        height: 25px;
+        visibility: visible;
+        cursor: pointer;
     }
 
     .navbar__list li {

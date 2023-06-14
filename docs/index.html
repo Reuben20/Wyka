@@ -15,12 +15,17 @@
             <div class="logo-container">
                 <img href="#" class="logo-container__image" src="./assets/img/header/logo_header.png">
             </div>
-            <ul class="navbar__list">
+            <ul class="navbar__list" id="navbar__list">
                 <li class="navbar__list__item pointer"><a href="#">RESERVAS</a></li>
                 <li class="navbar__list__item pointer"><a href="#">HABITACIONES</a></li>
                 <li class="navbar__list__item pointer"><a href="#">NOSOTROS</a></li>
                 <li class="navbar__list__item pointer"><a href="#">CONTACTANOS</a></li>
             </ul>
+            <svg id="menu" class="hamburger-menu" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50"
+                height="50" viewBox="0 0 50 50" style="fill:#FFFFFF;">
+                <path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z">
+                </path>
+            </svg>
         </nav>
     </header>
 
@@ -62,7 +67,7 @@
         </div>
         <section class="hero">
             <video id="video" class="hero__video" type="video/mp4" src="./assets/videos/video.mp4" preload="auto"
-                autoplay loop muted></video>
+                autoplay loop muted playsinline></video>
         </section>
 
         <div class="separador"></div>
