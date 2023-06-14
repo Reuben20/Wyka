@@ -42,6 +42,7 @@ document.getElementById('menu').addEventListener("click", () => {
         navbar__list.style.paddingBottom = "50px"
         state = true
     } else {
+        navbar__list.style.transition = "0s"
         navbar__list.style.visibility = "hidden"
         navbar__list.style.flexDirection = "row"
         navbar__list.style.marginTop = "0"
