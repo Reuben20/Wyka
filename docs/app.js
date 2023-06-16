@@ -50,3 +50,21 @@ document.getElementById('menu').addEventListener("click", () => {
         state = false
     }
 })
+
+var input = document.getElementById('input-id')
+var datePicker = new HotelDatepicker(input, {
+    format: 'dddd D MMM YYYY',
+    startOfWeek: 'monday',
+    i18n: {
+        selected: 'Il tuo soggiorno:',
+        night: 'Noche',
+        nights: 'Noches',
+        button: 'Cerca',
+        clearButton: 'Cancelar',
+        submitButton: 'Enviar',
+        'day-names-short': ['Dom', 'Lun', 'Mar', 'Mir', 'Jue', 'Vie', 'Sab'],
+        'day-names': ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
+        'month-names-short': ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Set', 'Oct', 'Nov', 'Dic'],
+        'month-names': ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+    }
+})

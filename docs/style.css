@@ -23,9 +23,19 @@ body {
     background: white;
 }
 
-.separador {
-    width: auto;
-    height: 12vh;
+.re-form-container {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    display: flex;
+    height: auto;
+    padding: 20px 10px 20px 10px;
+    flex-direction: column;
+    background-color: white;
+    border-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .header {
@@ -104,18 +114,6 @@ body {
     flex-direction: column;
 }
 
-.modal {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 150px;
-    right: 100px;
-    width: 250px;
-    height: 200px;
-    background-color: rgba(15, 25, 34, 0.6);
-    color: white;
-}
-
 .reserva {
     display: flex;
     align-items: center;
@@ -132,6 +130,7 @@ body {
 
 .hero {
     width: 100%;
+    z-index: -1000;
 }
 
 .hero__video {

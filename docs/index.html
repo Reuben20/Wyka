@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./DatePicker/hotel-datepicker.css">
+    <script src="./DatePicker/fecha.min.js"></script>
+    <script src="./DatePicker/hotel-datepicker.min.js"></script>
     <title>WYKA - HOTEL</title>
 </head>
 
@@ -31,41 +34,12 @@
     </header>
 
     <main class="main">
-        <div class="modal">
-            <div class="reserva">
-                <span>Hacer una reservas</span>
-            </div>
 
-            <form class="bm-form-container">
-                <div class="bm-form-row ">
+        <form class="re-form-container">
+            <span>HACER UNA RESERVA</span>
+            <button id="input-id">Reserva</button>
+        </form>
 
-                    <div class="bm-form-col">
-                        <div class="bm-date-card">
-                            <div>REGISTRATE</div>
-                            <div class="bm-date-card-day">05</div>
-                            <div>JUNIO</div>
-                            <div></div>
-                        </div>
-                    </div>
-
-                    <div class="bm-form-col">
-                        <div class="bm-date-card">
-                            <div>VERIFICAR</div>
-                            <div class="bm-date-card-day">06</div>
-                            <div>JUNIO</div>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bm-form-row">
-                    <button class="bm-btn btn btn-action btn-block" type="submit" role="link">
-                        <font style="vertical-align: inherit">
-                            <font style="vertical-align: inherit">Reservar</font>
-                        </font>
-                    </button>
-                </div>
-            </form>
-        </div>
         <section class="hero">
             <video id="video" class="hero__video" type="video/mp4" src="./assets/videos/video.mp4" preload="auto"
                 autoplay loop muted playsinline></video>
