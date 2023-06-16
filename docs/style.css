@@ -143,7 +143,7 @@ body {
     display: flex;
     flex-direction: row;
     width: auto;
-    height: 60vh;
+    padding: 8% 0 8% 0;
 }
 
 .info {
@@ -235,6 +235,7 @@ body {
 
 .card-container {
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -495,6 +496,7 @@ footer {
         height: 25px;
         visibility: visible;
         cursor: pointer;
+        width: 30%;
     }
 
     .navbar__list li {
@@ -546,6 +548,8 @@ footer {
 
     .room-card {
         margin-top: 5vh;
+        width: 80%;
+        height: 400px;
     }
 
     .room-intro {
